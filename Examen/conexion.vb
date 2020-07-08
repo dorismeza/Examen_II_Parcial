@@ -21,7 +21,29 @@ Public Class conexion
 
         End Try
     End Sub
+    Public Function consultaT() As DataTable
+        Try
 
+            conexion.Open()
+
+            Dim cmd As New SqlCommand("consultaTienda", conexion)
+
+            cmd.CommandType = CommandType.StoredProcedure
+
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
     Public Sub consulta(ByVal sql As String, ByVal tabla As String)
         ds.Tables.Clear()
         da = New SqlDataAdapter(sql, conexion)

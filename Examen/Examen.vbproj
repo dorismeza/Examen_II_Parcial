@@ -75,11 +75,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="tienda.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="tienda.Designer.vb">
+      <DependentUpon>tienda.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProducto.Designer.vb">
+      <DependentUpon>frmAddProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAggCliente.Designer.vb">
@@ -114,10 +120,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TiendaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TiendaDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaDataSet2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="tienda.resx">
+      <DependentUpon>tienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProducto.resx">
+      <DependentUpon>frmAddProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAggCliente.resx">
       <DependentUpon>frmAggCliente.vb</DependentUpon>
@@ -161,6 +175,17 @@
     </None>
     <None Include="TiendaDataSet1.xss">
       <DependentUpon>TiendaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaDataSet2.xsc">
+      <DependentUpon>TiendaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TiendaDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TiendaDataSet2.xss">
+      <DependentUpon>TiendaDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

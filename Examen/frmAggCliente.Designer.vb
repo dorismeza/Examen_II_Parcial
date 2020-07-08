@@ -31,24 +31,41 @@ Partial Class frmAggCliente
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.DataGridViewClientes = New System.Windows.Forms.DataGridView()
-        Me.IdClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TiendaDataSet = New Examen.TiendaDataSet()
         Me.ClienteTableAdapter = New Examen.TiendaDataSetTableAdapters.clienteTableAdapter()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
-        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ClienteBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TiendaDataSet1 = New Examen.TiendaDataSet1()
+        Me.ClienteBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClienteTableAdapter1 = New Examen.TiendaDataSet1TableAdapters.clienteTableAdapter()
+        Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.IdClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKVentaidCliente4D94879BBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VentaTableAdapter = New Examen.TiendaDataSetTableAdapters.VentaTableAdapter()
+        Me.TiendaDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClienteBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TiendaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TiendaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKVentaidCliente4D94879BBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TiendaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdcliente
         '
-        Me.txtIdcliente.Location = New System.Drawing.Point(77, 13)
+        Me.txtIdcliente.Location = New System.Drawing.Point(89, 75)
         Me.txtIdcliente.Name = "txtIdcliente"
         Me.txtIdcliente.Size = New System.Drawing.Size(100, 20)
         Me.txtIdcliente.TabIndex = 0
@@ -56,7 +73,7 @@ Partial Class frmAggCliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 16)
+        Me.Label1.Location = New System.Drawing.Point(30, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(53, 13)
         Me.Label1.TabIndex = 1
@@ -65,7 +82,7 @@ Partial Class frmAggCliente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 53)
+        Me.Label2.Location = New System.Drawing.Point(30, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 3
@@ -73,7 +90,7 @@ Partial Class frmAggCliente
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(77, 50)
+        Me.txtNombre.Location = New System.Drawing.Point(83, 112)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 2
@@ -81,7 +98,7 @@ Partial Class frmAggCliente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 79)
+        Me.Label3.Location = New System.Drawing.Point(207, 82)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 5
@@ -89,7 +106,7 @@ Partial Class frmAggCliente
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(77, 76)
+        Me.txtApellido.Location = New System.Drawing.Point(266, 79)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(100, 20)
         Me.txtApellido.TabIndex = 4
@@ -97,7 +114,7 @@ Partial Class frmAggCliente
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 109)
+        Me.Label4.Location = New System.Drawing.Point(207, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 13)
         Me.Label4.TabIndex = 7
@@ -105,21 +122,63 @@ Partial Class frmAggCliente
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(76, 109)
+        Me.txtDireccion.Location = New System.Drawing.Point(265, 112)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtDireccion.TabIndex = 6
         '
-        'DataGridViewClientes
+        'ClienteBindingSource
         '
-        Me.DataGridViewClientes.AutoGenerateColumns = False
-        Me.DataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdClienteDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
-        Me.DataGridViewClientes.DataSource = Me.ClienteBindingSource
-        Me.DataGridViewClientes.Location = New System.Drawing.Point(12, 178)
-        Me.DataGridViewClientes.Name = "DataGridViewClientes"
-        Me.DataGridViewClientes.Size = New System.Drawing.Size(323, 150)
-        Me.DataGridViewClientes.TabIndex = 8
+        Me.ClienteBindingSource.DataMember = "cliente"
+        Me.ClienteBindingSource.DataSource = Me.TiendaDataSet
+        '
+        'TiendaDataSet
+        '
+        Me.TiendaDataSet.DataSetName = "TiendaDataSet"
+        Me.TiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClienteTableAdapter
+        '
+        Me.ClienteTableAdapter.ClearBeforeFill = True
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(162, 144)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 9
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'ClienteBindingSource1
+        '
+        Me.ClienteBindingSource1.DataMember = "cliente"
+        Me.ClienteBindingSource1.DataSource = Me.TiendaDataSet
+        '
+        'TiendaDataSet1
+        '
+        Me.TiendaDataSet1.DataSetName = "TiendaDataSet1"
+        Me.TiendaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClienteBindingSource2
+        '
+        Me.ClienteBindingSource2.DataMember = "cliente"
+        Me.ClienteBindingSource2.DataSource = Me.TiendaDataSet1
+        '
+        'ClienteTableAdapter1
+        '
+        Me.ClienteTableAdapter1.ClearBeforeFill = True
+        '
+        'DataGridView
+        '
+        Me.DataGridView.AutoGenerateColumns = False
+        Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdClienteDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
+        Me.DataGridView.DataSource = Me.ClienteBindingSource
+        Me.DataGridView.Location = New System.Drawing.Point(33, 183)
+        Me.DataGridView.Name = "DataGridView"
+        Me.DataGridView.Size = New System.Drawing.Size(333, 150)
+        Me.DataGridView.TabIndex = 11
         '
         'IdClienteDataGridViewTextBoxColumn
         '
@@ -145,46 +204,47 @@ Partial Class frmAggCliente
         Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
-        'ClienteBindingSource
+        'FKVentaidCliente4D94879BBindingSource
         '
-        Me.ClienteBindingSource.DataMember = "cliente"
-        Me.ClienteBindingSource.DataSource = Me.TiendaDataSet
+        Me.FKVentaidCliente4D94879BBindingSource.DataMember = "FK__Venta__idCliente__4D94879B"
+        Me.FKVentaidCliente4D94879BBindingSource.DataSource = Me.ClienteBindingSource
         '
-        'TiendaDataSet
+        'VentaTableAdapter
         '
-        Me.TiendaDataSet.DataSetName = "TiendaDataSet"
-        Me.TiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.VentaTableAdapter.ClearBeforeFill = True
         '
-        'ClienteTableAdapter
+        'TiendaDataSet1BindingSource
         '
-        Me.ClienteTableAdapter.ClearBeforeFill = True
+        Me.TiendaDataSet1BindingSource.DataSource = Me.TiendaDataSet1
+        Me.TiendaDataSet1BindingSource.Position = 0
         '
-        'btnAgregar
+        'ClienteBindingSource3
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(216, 20)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 9
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.ClienteBindingSource3.DataMember = "cliente"
+        Me.ClienteBindingSource3.DataSource = Me.TiendaDataSet1BindingSource
         '
-        'btnModificar
+        'ErrorProvider
         '
-        Me.btnModificar.Location = New System.Drawing.Point(216, 57)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 10
-        Me.btnModificar.Text = "Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
+        Me.ErrorProvider.ContainerControl = Me
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(108, 21)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(182, 20)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "INGRESAR CLIENTE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'frmAggCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(353, 340)
-        Me.Controls.Add(Me.btnModificar)
+        Me.ClientSize = New System.Drawing.Size(413, 372)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.DataGridView)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.DataGridViewClientes)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.Label3)
@@ -193,11 +253,19 @@ Partial Class frmAggCliente
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtIdcliente)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAggCliente"
         Me.Text = "frmAggCliente"
-        CType(Me.DataGridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TiendaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TiendaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKVentaidCliente4D94879BBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TiendaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -211,14 +279,24 @@ Partial Class frmAggCliente
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtDireccion As TextBox
-    Friend WithEvents DataGridViewClientes As DataGridView
     Friend WithEvents TiendaDataSet As TiendaDataSet
     Friend WithEvents ClienteBindingSource As BindingSource
     Friend WithEvents ClienteTableAdapter As TiendaDataSetTableAdapters.clienteTableAdapter
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents ClienteBindingSource1 As BindingSource
+    Friend WithEvents TiendaDataSet1 As TiendaDataSet1
+    Friend WithEvents ClienteBindingSource2 As BindingSource
+    Friend WithEvents ClienteTableAdapter1 As TiendaDataSet1TableAdapters.clienteTableAdapter
+    Friend WithEvents DataGridView As DataGridView
+    Friend WithEvents FKVentaidCliente4D94879BBindingSource As BindingSource
+    Friend WithEvents VentaTableAdapter As TiendaDataSetTableAdapters.VentaTableAdapter
     Friend WithEvents IdClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents btnAgregar As Button
-    Friend WithEvents btnModificar As Button
+    Friend WithEvents TiendaDataSet1BindingSource As BindingSource
+    Friend WithEvents ClienteBindingSource3 As BindingSource
+    Friend WithEvents ErrorProvider As ErrorProvider
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents Label5 As Label
 End Class
