@@ -199,20 +199,6 @@ Public Class Tienda
     End Sub
 
     Private Sub txtModificar_Click(sender As Object, e As EventArgs) Handles txtModificar.Click
-        Try
 
-            Dim modificar As String =
-
-
-                mostrarDatos()
-                Limpiar()
-                conexion.conexion.Close()
-            Else
-                MessageBox.Show("Error al actualizar")
-                conexion.conexion.Close()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
     End Sub
 End Class
