@@ -19,9 +19,7 @@ Public Class Tienda
             MessageBox.Show("Registro existente")
         End Try
 
-        frmAddProducto.Show()
-        frmAggCliente.Show()
-        Me.Hide()
+
     End Sub
     Public Sub mostrarDatos()
 
@@ -37,6 +35,10 @@ Public Class Tienda
         Me.ConsultaTiendaTableAdapter.Fill(Me.TiendaDataSet2.consultaTienda)
         'TODO: esta línea de código carga datos en la tabla 'TiendaDataSet.Venta' Puede moverla o quitarla según sea necesario.
         Me.VentaTableAdapter.Fill(Me.TiendaDataSet.Venta)
+        frmAddProducto.Show()
+        Me.Hide()
+        frmAggCliente.Show()
+        Me.Hide()
 
     End Sub
     Private Sub txtCodigoCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodigoCliente.KeyPress

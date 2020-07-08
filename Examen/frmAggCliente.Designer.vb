@@ -255,6 +255,7 @@ Partial Class frmAggCliente
         Me.Controls.Add(Me.txtIdcliente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAggCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "frmAggCliente"
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TiendaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
