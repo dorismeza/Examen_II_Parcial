@@ -3,9 +3,7 @@
 Public Class Tienda
     Dim conexion As conexion = New conexion()
     Private Sub Agregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        frmAddProducto.Show()
-        frmAggCliente.Show()
-        Me.Hide()
+
 
         Try
             Dim agregar As String = "insert into factura.cliente values ( '" + txtIDVenta.Text + "','" + mskFecha.Text + "','" + txtPrecio.Text + "','" + txtCantidad.Text + "','" + txtCodigoCliente.Text + "','" + txtCodProducto.Text + "')"
@@ -13,6 +11,7 @@ Public Class Tienda
             If conexion.insertar(agregar) Then
                 MsgBox("Datos Agregados")
                 mostrarDatos()
+
             Else
                 MsgBox("Error")
             End If
@@ -20,6 +19,9 @@ Public Class Tienda
             MessageBox.Show("Registro existente")
         End Try
 
+        frmAddProducto.Show()
+        frmAggCliente.Show()
+        Me.Hide()
     End Sub
     Public Sub mostrarDatos()
 
